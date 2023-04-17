@@ -1,0 +1,7 @@
+#!/bin/fish
+
+	rm "$HOME/.data/remind/caldav.rem";
+	dav2rem -r "https://www.google.com/calendar/dav/eugenioandressepulveda@gmail.com/events" -u eugenioandressepulveda@gmail.com -p "MhOpyhBu&GNd}NDPn?Q3" -i "$HOME/.data/remind/caldav.rem" 2>/dev/null;
+	wyrd "$HOME/.data/remind/reminders.rem";
+
+exit 0;

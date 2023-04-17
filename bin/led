@@ -1,0 +1,15 @@
+#!/bin/bash
+
+	cd "/home/eugenio/extradrive/Eugenio/apps data/ledger/.data/ledger";
+	ledger \
+    -f bank.ledger \
+    -f credit-card.ledger \
+    -f currencies.ledger \
+    -f investments.ledger \
+    -f opening-balance.ledger \
+    -f virtual-accounts.ledger \
+    -f cash.ledger \
+    "$@";
+	cd -;
+
+exit 0;

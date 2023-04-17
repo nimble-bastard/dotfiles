@@ -1,0 +1,5 @@
+#!/bin/bash
+
+  ag --nobreak --nonumbers --noheading --hidden -G $TEXT_FILES_EXTS . | fzf | cut -d ':' -f 1 | xargs -d '\n' $EDITOR;
+
+exit 0;

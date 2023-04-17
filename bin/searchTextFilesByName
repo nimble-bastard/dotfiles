@@ -1,0 +1,5 @@
+#!/bin/bash
+
+	fdfind -H --type f --regex $TEXT_FILES_EXTS . | fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' | xargs -d '\n' $EDITOR;
+
+exit 0;

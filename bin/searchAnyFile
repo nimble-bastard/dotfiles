@@ -1,0 +1,5 @@
+#!/bin/bash
+
+	fdfind -H --type f . | fzf | xargs -d '\n' xdg-open;
+
+exit 0;
