@@ -1,0 +1,99 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  # Hello from your shell
+  #
+
+  - trigger: ":diario"
+    replace: "- #inbox Daily notes\n
+	      \t - ## Goals\n
+              \t\t - *DETELE: My goals for today*\n
+	      \t - ## [[Journal]]\n
+              \t\t - *DELETE: Time registry of tasks of the day*\n"
+
+  - trigger: ":articulo"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[articulos]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+ 
+  - trigger: ":libro"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[libros]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+
+  - trigger: ":frase"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[frases]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+
+  - trigger: ":video"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[videos]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+
+  - trigger: ":imagen"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[imagenes]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+
+  - trigger: ":tweet"
+    replace: "- Descripción y enlace\n 
+  	      type:: [[tweets]]\n
+  	      producer:: [[Recursos]]\n
+  	      tags:: [[Recursos]]\n"
+
+  - trigger: ":revision semanal"
+    replace: "- # Revision semanal\n
+	      \t - ## Tener claridad\n
+	      \t\t - TODO Recolectar papeles sueltos y materiales\n
+	      \t\t - TODO Dejar los inboxes en cero\n
+	      \t\t - TODO Vaciar tu cabeza, brain dump\n
+	      \t - ## Ponerse al corriente\n
+	      \t\t - TODO Revisar las listas de acciones siguientes\n
+	      \t\t - TODO Revisar calendario\n
+	      \t\t - TODO Revisar lista de proyectos\n
+	      \t - ## Se creativo\n
+	      \t\t - TODO Revisa lista de algun dia tal vez\n"
+
+## hiding notificactions
+show_notifications: false 
+
