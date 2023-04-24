@@ -1,0 +1,21 @@
+mark {
+  background: #fef3ac !important;
+  color: #262626 !important;
+}
+span[data-ref="#purple"],
+span[data-ref="#red"],
+span[data-ref="#pink"] {
+  display: none;
+}
+span[data-ref="#purple"] + mark {
+  background: #800080 !important;
+  color: #262626 !important;
+}
+span[data-ref="#red"] + mark {
+  background: #FF0000 !important;
+  color: #262626 !important;
+}
+span[data-ref="#pink"] + mark {
+  background: #FFC0CB !important;
+  color: #262626 !important;
+}
